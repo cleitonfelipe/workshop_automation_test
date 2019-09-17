@@ -30,7 +30,12 @@ namespace Calculadora
         {
             get { return _retorno; }
             set { _retorno = value; }
-        }               
+        }
+
+        public Calcular()
+        {
+
+        }
         public Calcular(params int[] values)
         {
             Primeiro = values[1];
