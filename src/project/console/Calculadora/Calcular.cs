@@ -45,6 +45,13 @@ namespace Calculadora
                 case 2:
                     Retorno = $"O resultado é: { Subtrair(Primeiro, Segundo) }";
                     break;
+                case 3:
+                    Retorno = $"O resultado é: { Multiplicar(Primeiro, Segundo) }";
+                    break;
+                case 4:
+                    var divisao = Dividir(Primeiro, Segundo) == 0 ? "Não é permitido divisão por zero." : Dividir(Primeiro, Segundo).ToString();
+                    Retorno = $"O resultado é: { divisao }";
+                    break;
                 default:
                     Retorno = "Fatal error";
                     break;
@@ -62,6 +69,20 @@ namespace Calculadora
         public int Subtrair(int primeiro, int segundo)
         {
             return primeiro - segundo;
+        }
+
+        public int Multiplicar(int primeiro, int segundo)
+        {
+            return primeiro * segundo;
+        }
+
+        public int Dividir(int primeiro, int segundo)
+        {
+            if ((primeiro == 0) || (segundo == 0))
+            {
+                return 0;
+            }
+            return primeiro / segundo;
         }
     }
 }
