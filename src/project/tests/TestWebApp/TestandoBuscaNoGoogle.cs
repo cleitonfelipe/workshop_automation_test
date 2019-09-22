@@ -16,7 +16,7 @@ namespace TestWebApp
         private IWebDriver driver;
         private IWebElement element;
         private string baseURL;
-        private string driverPath = @"C:\Users\cnds\source\repos\workshop_automation_test\src\project\tests\TestWebApp\";
+        private string driverPath = @"C:\Users\omehe\source\repos\workshop_automation_test\src\project\tests\TestWebApp\";
 
         public IWebDriver Driver
         {
