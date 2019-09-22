@@ -16,7 +16,7 @@ namespace TestWebApp
         private IWebDriver driver;
         private IWebElement element;
         private string baseURL;
-        private string driverPath = @"C:\Users\omehe\source\repos\workshop_automation_test\src\project\tests\TestWebApp\";
+        private string driverPath = @"[EndereÃ§o Driver Selenium]";
 
         public IWebDriver Driver
         {
@@ -37,7 +37,7 @@ namespace TestWebApp
         public void Setup()
         {
             Driver = new ChromeDriver(driverPath);
-            baseURL = "http://localhost:64161/";
+            baseURL = "https://workshopautomationtest.azurewebsites.net/";
             Driver.Navigate().GoToUrl(baseURL);
         }
 
@@ -60,8 +60,8 @@ namespace TestWebApp
         [Test]
         public void Cadastrar_Novo_Carro()
         {
-            // Para cada componente da tela é crio um novo IWebElement
-            // para que no momento de buscar o element o driver não se perca 
+            // Para cada componente da tela ï¿½ crio um novo IWebElement
+            // para que no momento de buscar o element o driver nï¿½o se perca 
             IWebElement menu = Driver.FindElement(By.LinkText("Carros"));
             menu.Click();
 
