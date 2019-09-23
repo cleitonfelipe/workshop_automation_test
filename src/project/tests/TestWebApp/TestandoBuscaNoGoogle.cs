@@ -58,14 +58,8 @@ namespace TestWebApp
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(d => d.Title.StartsWith("Selenium", StringComparison.OrdinalIgnoreCase));
 
-            // Should see: "Cheese - Google Search" (for an English locale)
-            //Console.WriteLine("Page title is: " + driver.Title);
-
             Driver.Close();
             Driver.Quit();
-
-            
-
         }
     }
 }
